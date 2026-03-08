@@ -4,6 +4,7 @@
 ![Homepage screenshot 2](./public/appScreenshot2.png)
 ![Homepage screenshot 3](./public/appScreenshot3.png)
 ![Homepage screenshot 4](./public/appScreenshot4.png)
+![Homepage screenshot 5](./public/appScreenshot5.png)
 
 A polished dental clinic website built with Next.js, React, TypeScript, and Tailwind CSS. The project focuses on a premium marketing experience for a fictional clinic, with service discovery, doctor profiles, FAQs, testimonials, appointment flow, and SEO-ready metadata.
 
