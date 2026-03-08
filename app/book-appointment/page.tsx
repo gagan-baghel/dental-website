@@ -17,7 +17,7 @@ export default function BookAppointmentPage() {
       <main className="site-main">
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[34px] bg-[linear-gradient(135deg,#113247_0%,#2d6a86_60%,#4f95b3_100%)] px-8 py-16 text-white md:px-12 md:py-20">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#b7d9e8]">Book Appointment</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#d7eef6]">Book Appointment</p>
             <h1 className="mt-3 max-w-4xl text-[11vw] font-black leading-[0.9] md:text-[4.8vw]">Plan Your Visit in Minutes</h1>
             <p className="mt-5 max-w-2xl text-sm text-white/80 md:text-base">
               Choose your treatment, pick your preferred time, and our team will confirm your visit quickly.
@@ -56,7 +56,7 @@ export default function BookAppointmentPage() {
 
             <div className="space-y-5">
               <article className="rounded-2xl border border-[#c8dbe7] bg-white/90 p-6">
-                <p className="text-xs uppercase tracking-[0.15em] text-[#2f6f8c]">How booking works</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-[#2f88ab]">How booking works</p>
                 <ul className="mt-3 space-y-2 text-sm text-[#35566d]">
                   <li>1. Submit your preferred treatment and time.</li>
                   <li>2. Receive confirmation from our care coordinator.</li>
@@ -64,13 +64,13 @@ export default function BookAppointmentPage() {
                 </ul>
               </article>
               <article className="rounded-2xl border border-[#c8dbe7] bg-white/90 p-6">
-                <p className="text-xs uppercase tracking-[0.15em] text-[#2f6f8c]">Contact</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-[#2f88ab]">Contact</p>
                 <p className="mt-2 text-sm text-[#35566d]">{clinicInfo.address}</p>
                 <p className="mt-3 text-sm text-[#35566d]">Phone: {clinicInfo.phone}</p>
                 <p className="text-sm text-[#35566d]">Email: {clinicInfo.email}</p>
               </article>
               <article className="rounded-2xl bg-[#0f2736] p-6 text-white">
-                <p className="text-xs uppercase tracking-[0.15em] text-[#9fc5d6]">Urgent Need?</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-[#c7e7f2]">Urgent Need?</p>
                 <p className="mt-2 text-sm text-white/85">For immediate assistance with severe pain or dental trauma, call our emergency line.</p>
                 <a href={`tel:${clinicInfo.emergencyPhone.replace(/[^\d+]/g, "")}`} className="mt-3 inline-flex font-semibold">
                   {clinicInfo.emergencyPhone}

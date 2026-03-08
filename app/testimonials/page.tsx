@@ -12,7 +12,7 @@ export default function TestimonialsPage() {
       <main className="site-main">
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-white p-8 shadow-[0_16px_40px_rgba(22,56,76,0.1)] md:p-12">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#2f6f8c]">Testimonials</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#2f88ab]">Testimonials</p>
             <h1 className="mt-3 text-[11vw] font-black leading-[0.9] text-[#173040] md:text-[4.8vw]">Patient Experiences</h1>
             <p className="mt-5 max-w-3xl text-sm text-[#496476] md:text-base">
               Real stories from patients who trusted Bright Smiles for preventive, cosmetic, and emergency care.
@@ -32,7 +32,7 @@ export default function TestimonialsPage() {
                   </div>
                 </div>
                 <p className="mt-5 text-sm leading-relaxed text-[#466173]">{item.quote}</p>
-                <p className="mt-5 text-xs tracking-[0.12em] text-[#2f6f8c]">★★★★★</p>
+                <p className="mt-5 text-xs tracking-[0.12em] text-[#2f88ab]">★★★★★</p>
               </article>
             ))}
           </div>

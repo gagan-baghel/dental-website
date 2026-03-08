@@ -19,7 +19,7 @@ export default function CarePage() {
       <main className="site-main">
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-white p-8 shadow-[0_16px_40px_rgba(22,56,76,0.1)] md:p-12">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#2f6f8c]">At-Home Care</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#2f88ab]">At-Home Care</p>
             <h1 className="mt-3 text-[11vw] font-black leading-[0.9] text-[#173040] md:text-[4.8vw]">Daily Oral Care Essentials</h1>
             <p className="mt-5 max-w-3xl text-sm text-[#496476] md:text-base">
               Keep your treatment results strong between visits with dentist-approved products and routines.

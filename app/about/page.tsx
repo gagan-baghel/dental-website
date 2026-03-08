@@ -31,7 +31,7 @@ export default function AboutPage() {
       <main className="site-main">
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-white p-6 shadow-[0_16px_40px_rgba(22,56,76,0.1)] md:p-10">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#2f6f8c]">About Us</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#2f88ab]">About Us</p>
             <h1 className="mt-3 text-[11vw] font-black leading-[0.9] text-[#173040] md:text-[4.8vw]">A Modern Clinic Built Around Better Smiles</h1>
             <p className="mt-5 max-w-3xl text-sm text-[#496476] md:text-base">
               Bright Smiles started with one mission: deliver advanced, comfortable dentistry that families can trust for life. Today, our multidisciplinary team combines preventive, cosmetic, and restorative expertise under one roof.
@@ -55,14 +55,14 @@ export default function AboutPage() {
           <h2 className="text-[9vw] font-black text-[#173040] md:text-[3.2vw]">Our Doctors</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {doctors.map((doctor) => (
-              <article key={doctor.name} className="overflow-hidden rounded-2xl border border-[#7caec4]/35 bg-[#8fbfd2]">
+              <article key={doctor.name} className="overflow-hidden rounded-2xl border border-[#77c0d8]/35 bg-[#8fd3e4]">
                 <div className="relative h-72 overflow-hidden">
                   <img className="h-full w-full object-cover object-top" src={doctor.image} alt={doctor.name} />
                 </div>
                 <div className="bg-[#0f2736] p-4 text-white">
                   <p className="font-bold">{doctor.name}</p>
                   <p className="text-sm text-white/80">{doctor.role}</p>
-                  <p className="mt-1 text-xs text-[#9fc5d6]">{doctor.credentials}</p>
+                  <p className="mt-1 text-xs text-[#c7e7f2]">{doctor.credentials}</p>
                 </div>
               </article>
             ))}

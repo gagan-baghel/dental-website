@@ -10,7 +10,7 @@ export default function TermsPage() {
       <main className="site-main">
         <section className="section-shell px-4 pt-6 md:px-6 md:pt-10">
           <article className="rounded-[28px] bg-white p-8 shadow-[0_16px_40px_rgba(22,56,76,0.1)] md:p-12">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#2f6f8c]">Terms of Service</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-[#2f88ab]">Terms of Service</p>
             <h1 className="mt-3 text-[10vw] font-black text-[#173040] md:text-[4vw]">Website Terms & Conditions</h1>
             <p className="mt-2 text-sm text-[#557082]">Effective date: March 8, 2026</p>
 

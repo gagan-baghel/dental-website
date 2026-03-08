@@ -10,13 +10,13 @@ export function Footer() {
         <div>
           <p className="text-3xl font-black">Bright Smiles</p>
           <p className="mt-4 text-sm leading-relaxed text-white/80">{clinicInfo.tagline}</p>
-          <p className="mt-6 text-xs uppercase tracking-[0.15em] text-[#8fc3da]">Follow us</p>
+          <p className="mt-6 text-xs uppercase tracking-[0.15em] text-[#c3e6f2]">Follow us</p>
           <div className="mt-4 flex flex-wrap gap-2.5">
             {socialLinks.map((link) => (
               <a
                 key={link}
                 href="#"
-                className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold transition hover:border-[#8fc3da] hover:text-[#8fc3da]"
+                className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold transition hover:border-[#c3e6f2] hover:text-[#c3e6f2]"
               >
                 {link}
               </a>
@@ -28,7 +28,7 @@ export function Footer() {
           <h3 className="text-base font-bold">Quick Links</h3>
           <div className="mt-5 space-y-3 text-sm text-white/80">
             {footerLinks.quick.map((item) => (
-              <Link key={item.href} href={item.href} className="block transition hover:text-[#8fc3da]">
+              <Link key={item.href} href={item.href} className="block transition hover:text-[#c3e6f2]">
                 {item.label}
               </Link>
             ))}
@@ -42,7 +42,7 @@ export function Footer() {
               <Link
                 key={service.title}
                 href="/services"
-                className="block transition hover:text-[#8fc3da]"
+                className="block transition hover:text-[#c3e6f2]"
               >
                 {service.title}
               </Link>
@@ -54,13 +54,13 @@ export function Footer() {
           <h3 className="text-base font-bold">Contact</h3>
           <div className="mt-5 space-y-3 text-sm text-white/80">
             <p>{clinicInfo.address}</p>
-            <a href={`tel:${clinicInfo.phone.replace(/[^\d+]/g, "")}`} className="block transition hover:text-[#8fc3da]">
+            <a href={`tel:${clinicInfo.phone.replace(/[^\d+]/g, "")}`} className="block transition hover:text-[#c3e6f2]">
               {clinicInfo.phone}
             </a>
-            <a href={`mailto:${clinicInfo.email}`} className="block transition hover:text-[#8fc3da]">
+            <a href={`mailto:${clinicInfo.email}`} className="block transition hover:text-[#c3e6f2]">
               {clinicInfo.email}
             </a>
-            <p className="pt-2 text-xs uppercase tracking-[0.12em] text-[#8fc3da]">Hours</p>
+            <p className="pt-2 text-xs uppercase tracking-[0.12em] text-[#c3e6f2]">Hours</p>
             {clinicInfo.hours.map((item) => (
               <p key={item}>{item}</p>
             ))}

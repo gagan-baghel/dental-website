@@ -39,7 +39,7 @@ export default function FaqPage() {
       <main className="site-main">
         <section className="section-shell px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-white p-6 shadow-[0_16px_40px_rgba(22,56,76,0.1)] md:p-10">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#2f6f8c]">FAQ</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#2f88ab]">FAQ</p>
             <h1 className="mt-3 text-[11vw] font-black leading-[0.9] text-[#173040] md:text-[4.8vw]">Answers to Common Dental Questions</h1>
             <p className="mt-5 max-w-3xl text-sm text-[#496476] md:text-base">
               Browse by category to quickly find details about appointments, treatment options, insurance, and care guidelines.
@@ -49,7 +49,7 @@ export default function FaqPage() {
 
         <section className="section-shell px-4 pt-10 md:px-6 md:pt-14">
           <div className="rounded-2xl border border-[#d3e3ed] bg-[#f5fafc] p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2f6f8c]">Browse by category</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2f88ab]">Browse by category</p>
             <div className="mt-4 flex flex-wrap gap-3">
               {categories.map((category) => (
                 <button
@@ -84,7 +84,7 @@ export default function FaqPage() {
                     className="flex w-full items-center justify-between gap-4 text-left"
                   >
                     <span className="text-base font-semibold text-[#173040]">{item.question}</span>
-                    <span className="text-2xl font-light text-[#2f6f8c]">{open ? "-" : "+"}</span>
+                    <span className="text-2xl font-light text-[#2f88ab]">{open ? "-" : "+"}</span>
                   </button>
                   {open && <p className="mt-4 text-sm leading-relaxed text-[#486273]">{item.answer}</p>}
                 </article>

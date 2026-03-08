@@ -179,9 +179,10 @@ export default function Home() {
 
       <main className="site-main pb-20 md:pb-28">
         <section id="home" data-hero className="section-shell section-shell--wide px-4 pt-1 md:px-6 md:pt-10">
-          <div className="relative overflow-hidden rounded-[34px] border border-white/35 bg-[linear-gradient(135deg,#86bbd1_0%,#74abc4_56%,#5f98b5_100%)] px-5 pb-10 pt-14 md:rounded-[40px] md:px-16 md:pb-20 md:pt-36">
-            <div className="pointer-events-none absolute -left-16 top-20 h-52 w-52 rounded-full bg-white/15 blur-3xl" />
-            <div className="pointer-events-none absolute right-4 top-8 h-64 w-64 rounded-full bg-[#b8dded]/25 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[34px] border border-white/40 bg-[linear-gradient(135deg,#8adbea_0%,#63c3df_44%,#46afd2_100%)] px-5 pb-10 pt-14 md:rounded-[40px] md:px-16 md:pb-20 md:pt-36">
+            <div className="pointer-events-none absolute -left-16 top-20 h-52 w-52 rounded-full bg-white/24 blur-3xl" />
+            <div className="pointer-events-none absolute right-4 top-8 h-64 w-64 rounded-full bg-[#dcfbff]/40 blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(255,255,255,0))]" />
             <div className="pointer-events-none absolute -right-12 bottom-10 h-56 w-56 rounded-full border border-white/25" />
 
             <div data-hero-copy className="relative z-10 max-w-2xl pb-2 md:pb-12">
@@ -195,7 +196,7 @@ export default function Home() {
               <div className="mt-8 flex flex-col items-start gap-4 md:mt-10 md:flex-wrap md:flex-row md:items-center md:gap-5">
                 <Link
                   href="/book-appointment"
-                  className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-white px-6 py-4 text-base font-semibold text-[#4f8dac] shadow-[0_14px_30px_rgba(255,255,255,0.25)] md:min-h-0 md:w-auto md:px-8 md:text-lg"
+                  className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-white px-6 py-4 text-base font-semibold text-[#359fc4] shadow-[0_14px_30px_rgba(255,255,255,0.28)] md:min-h-0 md:w-auto md:px-8 md:text-lg"
                 >
                   Book Appointment
                 </Link>
@@ -226,7 +227,7 @@ export default function Home() {
           <div className="rounded-[30px] border border-[#c1d8e5] bg-white/90 p-8 shadow-[0_16px_38px_rgba(24,64,87,0.08)] md:p-12">
             <div className="grid gap-10 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">Trusted standards</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">Trusted standards</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   {trustItems.map((item) => (
                     <span
@@ -249,7 +250,7 @@ export default function Home() {
         <section id="about" data-reveal className="section-shell section-shell--wide px-4 pt-14 md:px-6 md:pt-20">
           <div className="grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] xl:gap-20">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">Why choose us</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">Why choose us</p>
               <h3 className="mt-4 max-w-[13ch] text-[clamp(2.4rem,5vw,5rem)] font-bold leading-[0.96] tracking-tight text-[#173040]">
                 Personalized dentistry for comfort, precision, and lasting results.
               </h3>
@@ -273,7 +274,7 @@ export default function Home() {
                   data-stagger-item
                   className="flex gap-4 border-b border-[#d7e5ee] py-6 first:pt-2 last:border-b-0 last:pb-2"
                 >
-                  <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#edf5fa] text-xs font-bold text-[#2f6f8c]">
+                  <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#edf5fa] text-xs font-bold text-[#2f88ab]">
                     {index + 1}
                   </span>
                   <div>
@@ -289,7 +290,7 @@ export default function Home() {
         <section id="services" data-reveal className="section-shell section-shell--wide px-4 pt-14 md:px-6 md:pt-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">Treatments</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">Treatments</p>
               <h2 className="mt-2 text-[10vw] font-black text-[#173040] md:text-[4vw]">Services We Provide</h2>
             </div>
             <Link href="/services" className="rounded-full bg-[#102c3d] px-5 py-3 text-sm font-semibold text-white">
@@ -305,7 +306,7 @@ export default function Home() {
                 </div>
                 <h3 className="mt-5 text-2xl font-black text-[#173040]">{service.title}</h3>
                 <p className="mt-4 text-sm text-[#476172]">{service.description}</p>
-                <Link href="/services" className="mt-6 inline-flex text-sm font-semibold text-[#2f6f8c]">
+                <Link href="/services" className="mt-6 inline-flex text-sm font-semibold text-[#2f88ab]">
                   Learn More
                 </Link>
               </article>
@@ -317,7 +318,7 @@ export default function Home() {
           <div className="rounded-[36px] bg-white/90 p-8 shadow-[0_16px_42px_rgba(23,56,77,0.1)] md:p-14">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="text-[9vw] font-black text-[#173040] md:text-[3.4vw]">How It Works</h2>
-              <Link href="/book-appointment" className="text-sm font-semibold text-[#2f6f8c]">
+              <Link href="/book-appointment" className="text-sm font-semibold text-[#2f88ab]">
                 Start Your Journey
               </Link>
             </div>
@@ -343,7 +344,7 @@ export default function Home() {
         <section id="testimonials" data-reveal className="section-shell section-shell--wide px-4 pt-14 md:px-6 md:pt-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">Patient Stories</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">Patient Stories</p>
               <h2 className="mt-2 text-[10vw] font-black text-[#173040] md:text-[3.7vw]">Loved by Families</h2>
             </div>
             <Link href="/testimonials" className="rounded-full border border-[#b8cfdd] bg-white px-5 py-3 text-sm font-semibold text-[#173040]">
@@ -366,7 +367,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-5 text-sm leading-relaxed text-[#466173]">{item.quote}</p>
-                <p className="mt-5 text-xs tracking-[0.12em] text-[#2f6f8c]">★★★★★</p>
+                <p className="mt-5 text-xs tracking-[0.12em] text-[#2f88ab]">★★★★★</p>
               </article>
             ))}
           </div>
@@ -432,10 +433,10 @@ export default function Home() {
           <div className="mx-auto max-w-5xl rounded-[30px] border border-[#d2e3ec] bg-white/85 p-8 md:p-12">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">FAQ</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">FAQ</p>
                 <h2 className="mt-2 text-[10vw] font-black text-[#173040] md:text-[3.6vw]">Quick Answers</h2>
               </div>
-              <Link href="/faq" className="text-sm font-semibold text-[#2f6f8c]">
+              <Link href="/faq" className="text-sm font-semibold text-[#2f88ab]">
                 Visit FAQ Page
               </Link>
             </div>
@@ -452,7 +453,7 @@ export default function Home() {
 
         <section data-reveal className="section-shell section-shell--wide px-4 pt-14 md:px-6 md:pt-20">
           <div className="rounded-[34px] bg-[#0d2433] px-8 py-14 text-center text-white md:px-12 md:py-16">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#9bc4d8]">Premium Smile Care</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#c7e7f2]">Premium Smile Care</p>
             <h2 className="mx-auto mt-3 max-w-3xl text-[10vw] font-black leading-[0.95] md:text-[3.5vw]">Ready for your best smile?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-white/75 md:text-base">
               Schedule a personalized consultation and get a clear treatment roadmap from our specialist team.
@@ -473,7 +474,7 @@ export default function Home() {
             aria-label="Close booking popup"
           />
           <div className="relative z-10 w-full max-w-xl rounded-[28px] border border-[#cfe0ea] bg-white p-6 shadow-[0_24px_60px_rgba(12,34,49,0.25)] md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2f6f8c]">Book Now</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2f88ab]">Book Now</p>
             <h3 className="mt-2 text-3xl font-black leading-tight text-[#173040]">Ready to book your appointment?</h3>
             <p className="mt-3 text-sm text-[#4d6574]">Share a few details and continue to the full booking page.</p>
 

@@ -12,7 +12,7 @@ export default function ServicesPage() {
       <main className="site-main">
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-[linear-gradient(135deg,#113247_0%,#2d6a86_60%,#4f95b3_100%)] px-6 py-16 text-white md:px-12 md:py-20">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#b7d9e8]">Services</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-[#d7eef6]">Services</p>
             <h1 className="mt-3 max-w-[11ch] text-[clamp(3.4rem,14vw,5.3rem)] font-black leading-[0.9] [overflow-wrap:anywhere] md:max-w-none md:text-[5vw] md:[overflow-wrap:normal]">
               Comprehensive Dental Treatments
             </h1>
