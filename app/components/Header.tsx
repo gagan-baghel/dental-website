@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -74,9 +75,12 @@ export function Header() {
       >
         <Link
           href="/"
-          className="inline-flex h-11 items-center rounded-full px-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#123347] transition"
+          className="inline-flex h-11 items-center rounded-full px-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#123347] transition md:px-3"
+          aria-label="Bright Smiles home"
         >
-          Bright Smiles
+          <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#123347] shadow-[0_8px_18px_rgba(18,51,71,0.16)]">
+            <Image src="/logo.png" alt="Bright Smiles logo" width={36} height={36} className="h-8 w-8 object-contain invert" priority />
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-3 md:flex">
