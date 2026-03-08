@@ -6,28 +6,20 @@
 ![Homepage screenshot 4](./public/appScreenshot4.png)
 ![Homepage screenshot 5](./public/appScreenshot5.png)
 
-A polished dental clinic website built with Next.js, React, TypeScript, and Tailwind CSS. The project focuses on a premium marketing experience for a fictional clinic, with service discovery, doctor profiles, FAQs, testimonials, appointment flow, and SEO-ready metadata.
+A private end-to-end dental clinic website project created and owned by me. It focuses on a premium marketing experience for a fictional clinic, with service discovery, doctor profiles, FAQs, testimonials, appointment flow, and search-ready metadata.
 
 ## Overview
 
-Bright Smiles Dental Clinic is a multi-page static site designed for modern dental practices. It combines a clean healthcare-focused visual system with responsive layouts, lightweight motion, and reusable content-driven sections.
+Bright Smiles Dental Clinic is my multi-page static site project for a modern dental brand concept. It combines a clean healthcare-focused visual system with responsive layouts, lightweight motion, and reusable content-driven sections. This repository exists to document and maintain my work, not to invite public reuse.
 
 ## Key Features
 
 - Responsive homepage and inner pages for services, doctors, care, testimonials, FAQ, contact, and booking.
-- SEO setup with page metadata, canonical URLs, `robots.txt`, `sitemap.xml`, and JSON-LD structured data.
+- Search setup with page metadata, canonical URLs, `robots.txt`, `sitemap.xml`, and structured data.
 - Reusable site content stored in a central data module for easier updates.
-- GSAP-based motion for hero and section reveal interactions.
-- Tailwind CSS styling with custom global layout utilities.
-- Static generation through the Next.js App Router.
-
-## Tech Stack
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS
-- GSAP
+- Motion-driven hero and section reveal interactions.
+- Custom styling with global layout utilities.
+- Static multi-page application structure.
 
 ## Project Structure
 
@@ -45,12 +37,14 @@ app/
 public/            Static assets and screenshots
 ```
 
-## Getting Started
+## Local Development
 
 ### Prerequisites
 
 - Node.js 18 or newer
 - npm
+
+These commands are included for my own development workflow.
 
 ### Install
 
@@ -94,22 +88,26 @@ npm run start
 - `/privacy`
 - `/terms`
 
-## SEO Notes
+## Search Notes
 
 The project includes:
 
 - page-level metadata helpers
 - canonical URLs
-- Open Graph and Twitter metadata
+- social-sharing metadata
 - `robots.txt`
 - `sitemap.xml`
-- clinic structured data in JSON-LD format
+- clinic structured data
 
 ## Current Notes
 
 - `npm run build` is passing.
 - `npm run lint` currently has an ESLint plugin/rule compatibility issue in the existing setup.
 
-## License
+## Ownership and Usage
 
-This project is private and intended for internal or portfolio use.
+This is my personal project, built end-to-end by me.
+
+No one is permitted to copy, reuse, redistribute, modify, deploy, or present this work as their own without my explicit written permission.
+
+If this project, its code, its design direction, or any adapted portion of it is ever referenced with permission, clear credit to me is required.
