@@ -178,26 +178,30 @@ export default function Home() {
       <Header />
 
       <main className="site-main pb-20 md:pb-28">
-        <section id="home" data-hero className="section-shell section-shell--wide px-4 pt-4 md:px-6 md:pt-10">
-          <div className="relative overflow-hidden rounded-[40px] border border-white/35 bg-[linear-gradient(135deg,#86bbd1_0%,#74abc4_56%,#5f98b5_100%)] px-8 pb-16 pt-28 md:px-16 md:pb-20 md:pt-36">
+        <section id="home" data-hero className="section-shell section-shell--wide px-4 pt-1 md:px-6 md:pt-10">
+          <div className="relative overflow-hidden rounded-[34px] border border-white/35 bg-[linear-gradient(135deg,#86bbd1_0%,#74abc4_56%,#5f98b5_100%)] px-5 pb-10 pt-14 md:rounded-[40px] md:px-16 md:pb-20 md:pt-36">
             <div className="pointer-events-none absolute -left-16 top-20 h-52 w-52 rounded-full bg-white/15 blur-3xl" />
             <div className="pointer-events-none absolute right-4 top-8 h-64 w-64 rounded-full bg-[#b8dded]/25 blur-3xl" />
             <div className="pointer-events-none absolute -right-12 bottom-10 h-56 w-56 rounded-full border border-white/25" />
 
-            <div data-hero-copy className="relative z-10 max-w-2xl pb-4 md:pb-12">
-              <p className="mb-5 inline-flex rounded-full border border-white/70 bg-white/25 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/95">
+            <div data-hero-copy className="relative z-10 max-w-2xl pb-2 md:pb-12">
+              <p className="mb-4 inline-flex rounded-full border border-white/70 bg-white/18 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/95 md:mb-5 md:text-xs md:tracking-[0.2em]">
                 Trusted Dental Care
               </p>
-              <h1 className="text-[17vw] font-black leading-[0.9] text-white md:text-[7vw]">Expert Dental Care</h1>
-              <h2 className="mt-2 text-[9.5vw] font-bold text-white md:text-[4vw]">for Your Smile</h2>
-              <div className="mt-10 flex flex-wrap items-center gap-5">
+              <h1 className="max-w-[7.5ch] text-[15vw] font-black leading-[0.9] text-white md:max-w-none md:text-[7vw]">
+                Expert Dental Care
+              </h1>
+              <h2 className="mt-3 text-[8.4vw] font-bold leading-[0.95] text-white md:mt-2 md:text-[4vw]">for Your Smile</h2>
+              <div className="mt-8 flex flex-col items-start gap-4 md:mt-10 md:flex-wrap md:flex-row md:items-center md:gap-5">
                 <Link
                   href="/book-appointment"
-                  className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-[#5c9ab7] shadow-[0_14px_30px_rgba(255,255,255,0.25)]"
+                  className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-white px-6 py-4 text-base font-semibold text-[#4f8dac] shadow-[0_14px_30px_rgba(255,255,255,0.25)] md:min-h-0 md:w-auto md:px-8 md:text-lg"
                 >
                   Book Appointment
                 </Link>
-                <p className="text-sm font-semibold text-white/90">4.9 rating across 1,000+ happy patients</p>
+                <p className="max-w-[18rem] text-sm font-semibold leading-snug text-white/90 md:max-w-none">
+                  4.9 rating across 1,000+ happy patients
+                </p>
               </div>
             </div>
 
