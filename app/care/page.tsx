@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { careProducts } from "../components/siteData";
 
 const tips = [
@@ -69,3 +71,11 @@ export default function CarePage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "At-Home Dental Care Tips",
+  description:
+    "Maintain healthy teeth and gums between clinic visits with dentist-approved daily routines and oral care essentials.",
+  path: "/care",
+  keywords: ["oral care tips", "at-home dental care", "gum care", "teeth whitening maintenance"]
+});

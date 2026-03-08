@@ -26,6 +26,7 @@ body {
   min-height: 100%;
   width: 100%;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -36,6 +37,10 @@ body {
     radial-gradient(circle at 16% 4%, #f5fbff 0%, rgba(245, 251, 255, 0.15) 28%),
     radial-gradient(circle at 86% 2%, rgba(172, 214, 232, 0.45) 0%, rgba(172, 214, 232, 0) 34%),
     var(--bg);
+}
+
+body.menu-open {
+  touch-action: none;
 }
 
 h1,

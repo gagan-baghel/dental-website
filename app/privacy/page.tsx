@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { clinicInfo } from "../components/siteData";
 
 export default function PrivacyPage() {
@@ -63,3 +65,11 @@ export default function PrivacyPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Privacy Policy & HIPAA Notice",
+  description:
+    "Understand how Bright Smiles Dental Clinic collects, uses, and protects patient data in compliance with HIPAA guidelines.",
+  path: "/privacy",
+  keywords: ["dental privacy policy", "HIPAA notice", "patient data protection"]
+});

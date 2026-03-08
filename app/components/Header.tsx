@@ -13,12 +13,6 @@ const primaryLinks = [
   { label: "Contact", href: "/contact" }
 ];
 
-const homeSectionLinks = [
-  { label: "About", href: "/about" },
-  { label: "Care", href: "/care" },
-  { label: "Book Appointment", href: "/book-appointment" }
-];
-
 export function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,9 +30,30 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
+    document.body.classList.toggle("menu-open", menuOpen);
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("menu-open");
     };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      return;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, [menuOpen]);
 
   const isHome = pathname === "/";
@@ -85,31 +100,80 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 items-center rounded-full bg-[#eef5f9] px-4 text-sm font-semibold text-[#123347] transition md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#eef5f9] text-[#123347] transition hover:bg-white md:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
-          {menuOpen ? "Close" : "Menu"}
+          <span className="relative flex h-4 w-4 items-center justify-center" aria-hidden="true">
+            <span
+              className={`absolute h-0.5 w-4 rounded-full bg-current transition-transform duration-300 ${
+                menuOpen ? "rotate-45" : "-translate-y-[5px]"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-4 rounded-full bg-current transition-opacity duration-200 ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-4 rounded-full bg-current transition-transform duration-300 ${
+                menuOpen ? "-rotate-45" : "translate-y-[5px]"
+              }`}
+            />
+          </span>
         </button>
       </div>
 
-      <nav
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-5 bg-[#0c2231]/95 px-6 text-white backdrop-blur-xl transition ${
-          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      <div
+        className={`fixed inset-0 z-40 transition md:hidden ${
+          menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!menuOpen}
       >
-        {[...primaryLinks, ...homeSectionLinks].map((item) => (
-          <Link
-            key={`mobile-${item.href}-${item.label}`}
-            href={item.href}
-            onClick={closeMenu}
-            className="text-center text-3xl font-black tracking-tight md:text-5xl"
-          >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+        <button
+          type="button"
+          onClick={closeMenu}
+          className={`absolute inset-0 bg-[#0c2231]/42 backdrop-blur-sm transition duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+          aria-label="Close menu overlay"
+        />
+
+        <nav
+          id="mobile-navigation"
+          className={`absolute inset-x-2 bottom-2 top-[4.5rem] overflow-y-auto rounded-[28px] border border-white/55 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(234,244,249,0.98)_100%)] px-3 py-3 text-[#123347] shadow-[0_30px_70px_rgba(12,34,49,0.22)] transition duration-300 ${
+            menuOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="mb-3 flex items-center justify-end">
+            <button
+              type="button"
+              onClick={closeMenu}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d4e2ea] bg-white text-[#123347] shadow-[0_10px_22px_rgba(18,51,71,0.08)]"
+              aria-label="Close menu"
+            >
+              <span className="relative block h-4 w-4" aria-hidden="true">
+                <span className="absolute left-1/2 top-1/2 h-0.5 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-current" />
+                <span className="absolute left-1/2 top-1/2 h-0.5 w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
+              </span>
+            </button>
+          </div>
+
+          <div className="grid gap-2">
+            {navLinks.map((item) => (
+              <Link
+                key={`mobile-primary-${item.href}`}
+                href={item.href}
+                onClick={closeMenu}
+                className="rounded-[20px] bg-white px-4 py-4 text-base font-bold shadow-[0_12px_26px_rgba(18,51,71,0.06)] transition hover:bg-[#f7fbfd]"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

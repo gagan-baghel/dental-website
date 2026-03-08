@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { doctors } from "../components/siteData";
 
 export default function DoctorsPage() {
@@ -53,3 +55,11 @@ export default function DoctorsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Meet Our Dental Specialists",
+  description:
+    "Get to know our orthodontic, pediatric, surgical, and cosmetic dental specialists at Bright Smiles Dental Clinic.",
+  path: "/doctors",
+  keywords: ["dental specialists", "orthodontist", "cosmetic dentist", "pediatric dentist"]
+});

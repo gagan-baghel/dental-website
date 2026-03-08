@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
+import { clinicInfo, mediaAssets } from "./components/siteData";
+import { siteMetadata, siteUrl } from "./components/seo";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -14,25 +16,52 @@ const sora = Sora({
   weight: ["400", "500", "600", "700", "800"]
 });
 
-const siteTitle = "Bright Smiles Dental Clinic | Premium Family & Cosmetic Dentistry";
-const siteDescription =
-  "Comprehensive dental care including preventive, cosmetic, orthodontic, implant, and emergency services with a comfort-first patient experience.";
+export const metadata: Metadata = siteMetadata;
 
-export const metadata: Metadata = {
-  title: siteTitle,
-  description: siteDescription,
-  openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    type: "website",
-    url: "https://brightsmilesclinic.com",
-    siteName: "Bright Smiles Dental Clinic"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription
-  }
+const clinicStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": `${siteUrl}/#clinic`,
+      name: clinicInfo.name,
+      description: clinicInfo.tagline,
+      url: siteUrl,
+      image: mediaAssets.heroDesktop,
+      telephone: clinicInfo.phone,
+      email: clinicInfo.email,
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1188 Maple Avenue, Suite 210",
+        addressLocality: "Austin",
+        addressRegion: "TX",
+        postalCode: "78701",
+        addressCountry: "US"
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "08:00",
+          closes: "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: "Saturday",
+          opens: "09:00",
+          closes: "15:00"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: clinicInfo.name,
+      description: clinicInfo.tagline
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -42,7 +71,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${sora.variable} antialiased`}>{children}</body>
+      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicStructuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

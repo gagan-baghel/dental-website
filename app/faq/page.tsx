@@ -7,6 +7,18 @@ import { Header } from "../components/Header";
 import { faqItems } from "../components/siteData";
 
 const categories = ["General", "Treatments", "Insurance", "Appointments"] as const;
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer
+    }
+  }))
+};
 
 export default function FaqPage() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("General");
@@ -19,6 +31,10 @@ export default function FaqPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
       <Header />
       <main className="site-main">
         <section className="section-shell px-4 pt-6 md:px-6 md:pt-10">

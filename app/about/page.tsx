@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { doctors, highlights } from "../components/siteData";
 
 const values = [
@@ -94,3 +96,11 @@ export default function AboutPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "About Our Dental Team",
+  description:
+    "Learn about Bright Smiles Dental Clinic, our specialist doctors, and the care standards that guide every treatment plan.",
+  path: "/about",
+  keywords: ["about dental clinic", "dental specialists", "Austin dentist team"]
+});

@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 
 export default function TermsPage() {
   return (
@@ -62,3 +64,11 @@ export default function TermsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Terms of Service",
+  description:
+    "Review Bright Smiles Dental Clinic website terms, appointment policies, payment terms, and acceptable use conditions.",
+  path: "/terms",
+  keywords: ["dental website terms", "appointment terms", "clinic terms and conditions"]
+});

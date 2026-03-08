@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { services, valueProps } from "../components/siteData";
 
 export default function ServicesPage() {
@@ -11,7 +13,9 @@ export default function ServicesPage() {
         <section className="section-shell section-shell--wide px-4 pt-6 md:px-6 md:pt-10">
           <div className="rounded-[32px] bg-[linear-gradient(135deg,#113247_0%,#2d6a86_60%,#4f95b3_100%)] px-6 py-16 text-white md:px-12 md:py-20">
             <p className="text-xs uppercase tracking-[0.18em] text-[#b7d9e8]">Services</p>
-            <h1 className="mt-3 text-[12vw] font-black leading-[0.9] md:text-[5vw]">Comprehensive Dental Treatments</h1>
+            <h1 className="mt-3 max-w-[11ch] text-[clamp(3.4rem,14vw,5.3rem)] font-black leading-[0.9] [overflow-wrap:anywhere] md:max-w-none md:text-[5vw] md:[overflow-wrap:normal]">
+              Comprehensive Dental Treatments
+            </h1>
             <p className="mt-5 max-w-2xl text-sm text-white/80 md:text-base">
               From preventive checkups to advanced restorative and cosmetic dentistry, every service is planned around long-term oral health.
             </p>
@@ -63,3 +67,11 @@ export default function ServicesPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Dental Services",
+  description:
+    "Explore preventive, cosmetic, orthodontic, implant, and emergency dental services tailored for long-term oral health.",
+  path: "/services",
+  keywords: ["dental services", "cosmetic dentistry", "orthodontics", "dental implants"]
+});

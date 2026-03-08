@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { buildPageMetadata } from "../components/seo";
 import { testimonials } from "../components/siteData";
 
 export default function TestimonialsPage() {
@@ -52,3 +54,11 @@ export default function TestimonialsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Patient Testimonials",
+  description:
+    "Read verified patient experiences from cosmetic, implant, emergency, and preventive dental treatments at Bright Smiles.",
+  path: "/testimonials",
+  keywords: ["dental testimonials", "patient reviews", "dental clinic ratings"]
+});
